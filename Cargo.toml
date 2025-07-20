@@ -1,9 +1,19 @@
 [package]
 name = "event-system"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 authors = ["kdletters"]
-repository = ""
+repository = "https://github.com/kdletters/event-system"
+description = """
+A very super simple event system, only three functions: subscribe, unsubscribe and publish. (and a singleton, never mind.)
+Supports async. (see `main-async` in examples)
+"""
+readme = "README.md"
+keywords = [
+    "event",
+    "event-system",
+]
+license = "MIT"
 
 [dependencies]
 lazy_static = "1.5.0"
