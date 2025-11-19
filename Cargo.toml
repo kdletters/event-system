@@ -17,7 +17,7 @@ license = "MIT"
 
 [dependencies]
 lazy_static = "1.5.0"
-lockfree = "0.5.1"
+lock_freedom = "0.1.1"
 
 [dev-dependencies]
 tokio = { version = "1.46.1", features = ["full"]}

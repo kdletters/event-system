@@ -1,4 +1,4 @@
-use event_system::EventSystem;
+use k_event_system::EventSystem;
 
 fn main() {
     let handle = EventSystem::singleton().subscribe(|x: &usize| println!("I am {}", x));
