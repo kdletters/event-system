@@ -2,17 +2,17 @@
 A very super simple event system, only three functions: subscribe, unsubscribe and publish. (and a singleton, never mind.)
 Supports async. (see `main-async` in examples)
 ```rust
-let handle = event_system::EventSystem::singleton().subscribe(|x: &usize| println!("I am {}", x));
-event_system::EventSystem::singleton().publish(&4usize);
+let handle = k_event_system::EventSystem::singleton().subscribe(|x: &usize| println!("I am {}", x));
+k_event_system::EventSystem::singleton().publish(&4usize);
 
-event_system::EventSystem::singleton().subscribe(test);
-event_system::EventSystem::singleton().publish(&6usize);
+k_event_system::EventSystem::singleton().subscribe(test);
+k_event_system::EventSystem::singleton().publish(&6usize);
 
-event_system::EventSystem::singleton().unsubscribe::<usize>(handle);
-event_system::EventSystem::singleton().publish(&8usize);
+k_event_system::EventSystem::singleton().unsubscribe::<usize>(handle);
+k_event_system::EventSystem::singleton().publish(&8usize);
 
-event_system::EventSystem::singleton().subscribe(on_login);
-event_system::EventSystem::singleton().publish(&Login);
+k_event_system::EventSystem::singleton().subscribe(on_login);
+k_event_system::EventSystem::singleton().publish(&Login);
 
 fn test(i: &usize) {
     println!("I am F {}", i);
@@ -36,7 +36,7 @@ on login
 */
 
 use lazy_static::lazy_static;
-use lockfree::map::Map;
+use lock_freedom::map::Map;
 use std::any::*;
 use std::sync::atomic::AtomicUsize;
 use std::sync::atomic::Ordering;

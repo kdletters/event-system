@@ -1,4 +1,4 @@
-use event_system::EventSystem;
+use k_event_system::EventSystem;
 use std::time::Duration;
 use tokio::time::sleep;
 use tokio::{join, spawn};
